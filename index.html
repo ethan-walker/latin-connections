@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <title>Latin Connections</title>
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+	<link href="css/connections.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+	
+	<!-- <link rel="preload" href="fonts/Fraunces/Fraunces[SOFT,WONK,opsz,wght].woff2" as="font" type="font/woff2" crossorigin> -->
+</head>
+
+<body>
+	<dialog class="dialog dialog--modal dialog--results-modal">
+		<header class="dialog-header">
+			<div class="dialog-header__text">
+				<h2 class="dialog-header__title">Game Over!</h2>
+				<span class="dialog-header__subtitle">Connections #1</span>
+			</div>
+			<button class="button button--icon button--borderless close-modal">
+				<i class="uil uil-multiply"></i>
+			</button>
+		</header>
+		<article class="dialog-content">
+			<div class="puzzle-recap">
+			</div>
+		</article>
+		<footer class="dialog-footer dialog-footer--buttons">
+			<button class="button button--pill share-results">Share result</button>
+		</footer>
+	</dialog>
+	<section class="toast-container toast-container--bottom">
+	</section>
+  <main class="page">
+		<header class="page-header">
+			<div class="title">
+				<h1>Latin Connections</h1>
+			</div>
+		</header>
+		<div class="game">
+			<div class="board">
+			</div>
+			<div class="remaining-attempts">
+				<span>Remaining:</span>
+				<span class="attempts-remaining-container">
+				</span>
+			</div>
+			<div class="buttons connections-buttons">
+				<button class="deselect-all button button--pill">deselect all</button>
+				<button class="submit button button--pill button--disabled" disabled>submit</button>
+			</div>
+		</div>
+	</main>
+	<script src="./js/index.js"></script>
+	<script src="./js/data.js"></script>
+	<script src="./js/connections.js"></script>
+</body>
+
+</html>

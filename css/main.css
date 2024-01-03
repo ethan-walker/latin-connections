@@ -1,0 +1,123 @@
+@import "animations.css";
+@import "colours.css";
+@import "z-index.css";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
+
+* {
+	font-family: "Fraunces", georgia;
+	box-sizing: border-box;
+	color: var(--color-terracotta);
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+}
+html, body {
+	background: var(--color-cream);
+}
+
+/*-- 💬 DIALOGS --*/
+.dialog {
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+	
+	margin: auto;
+	
+	width: 20rem;
+	max-width: calc(100vw - 2rem);
+	
+	border: 1px solid var(--color-terracotta);
+	background-color: var(--color-cream);
+	animation: dialog-drop 300ms;
+	border-radius: 5px;
+	transition: opacity 300ms, box-shadow 300ms;
+
+	z-index: var(--layer-dialog);
+	padding: 0;
+}
+.dialog > * {
+	padding-inline: 1em;
+}
+/*-- MODALS --*/
+.dialog--modal:not([open]) {
+	opacity: 0;
+	pointer-events: none;
+}
+.dialog--modal[open] {
+	opacity: 1;
+	animation: dialog-push 300ms;
+	box-shadow: 0 .4rem 1.3rem rgba(0,0,0,0.25);
+}
+.dialog--modal::backdrop {
+	background-color: rgba(0,0,0,0.333);
+}
+.dialog-header {
+	border-bottom: 1px solid var(--color-terracotta);
+	display: grid;
+	grid-template-columns: 1fr 2em;
+	padding-block: .5em;
+}
+.dialog-content {
+}
+.dialog-footer {
+	padding-bottom: .5em;
+	/* border-top: 1px solid var(--color-terracotta); */
+}
+
+/*-- 🔘 BUTTONS --*/
+.button {
+	border: 1px solid var(--color-terracotta);
+	background-color: var(--color-cream);
+	padding: 10px 20px;
+	font-size: inherit;
+	min-height: 24px;
+}
+.button--pill {
+	border-radius: 50vh;
+}
+.button--fill {
+	background-color: var(--color-terracotta);
+	color: var(--color-cream);
+}
+.button:disabled {
+	opacity: .7;
+}
+.button--icon {
+	aspect-ratio: 1;
+	display: grid;
+	place-content: center;
+	padding: 0;
+}
+.button--borderless {
+	border: none;
+}
+.button:not(:disabled):hover {
+	cursor: pointer;
+}
+/*-- 🍞 TOASTS --*/
+.toast-container {
+	position:absolute;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	z-index: 900;
+	padding: 2em;
+	font-size: 1.2rem;
+	pointer-events: none;
+}
+.toast-container--bottom {
+	bottom: 0;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.toast {
+	padding: .5em .7em;
+	background-color: var(--color-black);
+	color: white;
+	border-radius: 5px;
+	animation:
+		fade-in 300ms ease,
+		slide-up 300ms ease,
+		fade-out 300ms ease 3s forwards;
+	z-index: var(--layer-toast);
+}

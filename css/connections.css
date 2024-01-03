@@ -1,0 +1,197 @@
+/*-- TITLE --*/
+:root {
+}
+.title {
+	text-align: center;
+	color: var(--color-cream);
+	background-color: var(--color-terracotta);
+	padding: .3em .7em;
+	display: flex;
+	border-inline: 20px solid hotpink;
+	position: relative;
+	border-image-source: url("../assets/meander-border.svg");
+	border-image-slice: 130;
+	border-image-repeat: repeat;
+	overflow:hidden;
+}
+h1 {
+	color: inherit;
+	font-weight: 700;
+	/* font-variation-settings: "opsz" 72 , "SOFT" 0 !important; */
+	font-optical-sizing: none;
+}
+.page-header {
+	padding-block: 1.5em;
+	display: flex;
+	justify-content: center;
+}
+.game {
+	margin-inline: auto;
+	width: clamp(0px, 40em, 95vw);
+	gap: 10px;
+}
+.board {
+	position: relative;
+	width: 100%;
+	margin-bottom: 1em;
+	font-size: 1.1em;
+	height: 60dvh;
+	--gap: 10px;
+	--size: calc(calc(100% - calc(3 * var(--gap))) / 4);
+}
+/*-- ITEMS --*/
+.item {
+	border: 1px solid var(--color-terracotta);
+	background-color: var(--color-cream);
+	display: grid;
+	place-content: center;
+	position: absolute;
+	width: var(--size);
+	height: var(--size);
+	transition: left 1s, top 1s;
+	font-size: clamp(0px, 1em, 4vw);
+	user-select: none;
+}
+.answer-banner {
+	width: 100%;
+	position: absolute;
+	height: calc(calc(100% - calc(3 * var(--gap))) / 4);
+	display: grid;
+	place-content: center;
+	color: white;
+	z-index: var(--layer-2);
+	animation: pop 300ms;
+}
+/* comment */
+.answer-banner--group-0 {
+	background-color: var(--color-difficulty-1);
+}
+.answer-banner--group-1 {
+	background-color: var(--color-difficulty-2);
+}
+.answer-banner--group-2 {
+	background-color: var(--color-difficulty-3);
+}
+.answer-banner--group-3 {
+	background-color: var(--color-difficulty-4);
+}
+.banner-text {
+	color: var(--color-cream);
+	text-align: center;
+}
+/* CHANGE */
+/* SHOULDNT BE MODIFIER */
+.banner-text--title {
+	font-weight: bold;
+}
+.board.board--full .item:not(.item--selected) {
+	border-style: dashed;
+	border-width: 1px;
+	opacity: .6;
+}
+.item:hover {
+	cursor: pointer;
+	/* background-image: linear-gradient(
+		135deg,
+		var(--color-stripes-dark) 25%,
+		#fff 0,#fff 50%,
+		var(--color-stripes-dark)  0,var(--color-stripes-dark)  75%,
+		#fff 0,#fff
+	);
+	background-size: 19.8px 19.8px; */
+	border-width: 3px;
+}
+.board:not(.board--full) .item:active {
+	scale: .9;
+}
+.board.board--full .item:not(.item--selected):hover {
+	cursor: default;
+}
+.item--selected {
+	background-color: var(--color-terracotta);
+	color: var(--color-cream);
+	font-style: oblique;
+	z-index: var(--layer-1);
+}
+.buttons {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.remaining-attempts {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+.attempts-remaining-container {
+	display: inline-flex;
+	gap: 5px;
+}
+.circle {
+	border-radius: 50%;
+	height: 1em;
+	aspect-ratio: 1;
+	background-color: var(--color-terracotta);
+}
+.connections-buttons {
+	font-size: 1.1em;
+}
+/*-- 📦 GRID POSITIONING --*/
+.item--col-0 {
+	left: 0;
+}
+.item--col-1 {
+	left: calc(var(--size) + var(--gap));
+}
+.item--col-2 {
+	left: calc(2 * calc(var(--size) + var(--gap)));
+}
+.item--col-3 {
+	left: calc(3 * calc(var(--size) + var(--gap)));
+}
+.item--row-0 {
+	top: 0;
+}
+.item--row-1 {
+	top: calc(var(--size) + var(--gap));
+}
+.item--row-2 {
+	top: calc(2 * calc(var(--size) + var(--gap)));
+}
+.item--row-3 {
+	top: calc(3 * calc(var(--size) + var(--gap)));
+}
+/* PUZZLE RECAP */
+.puzzle-recap {
+	margin-inline: auto;
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	gap: 3px;
+}
+.puzzle-recap__row {
+	display: flex;
+	gap: 3px;
+}
+.puzzle-recap__item {
+	aspect-ratio: 1;
+	width: 2em;
+}
+.puzzle-recap__item--group-0 {
+	background-color: var(--color-difficulty-1);
+}
+.puzzle-recap__item--group-1 {
+	background-color: var(--color-difficulty-2);
+}
+.puzzle-recap__item--group-2 {
+	background-color: var(--color-difficulty-3);
+}
+.puzzle-recap__item--group-3 {
+	background-color: var(--color-difficulty-4);
+}
+.dialog-footer--buttons {
+	display: flex;
+	justify-content: center;
+}

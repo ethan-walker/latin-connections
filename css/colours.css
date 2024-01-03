@@ -1,0 +1,16 @@
+/* comment */
+:root {
+	--color-terracotta: oklch(0.64 0.13 38.23);
+	--color-cream: oklch(98.67% 0.0127 97.63);
+	--color-black: oklch(34.75% 0.0037 38.23);
+
+	--color-yellow: oklch(78.44% 0.1296 79.47);
+	--color-green: oklch(78.44% 0.1296 134.76);
+	--color-blue: oklch(78.44% 0.1296 186.13);
+	--color-purple: oklch(78.44% 0.1296 309.38);
+	
+	--color-difficulty-1: var(--color-yellow);
+	--color-difficulty-2: var(--color-green);
+	--color-difficulty-3: var(--color-blue);
+	--color-difficulty-4: var(--color-purple);
+}

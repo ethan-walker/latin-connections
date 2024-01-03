@@ -1,0 +1,69 @@
+/* comment */
+@keyframes click {
+	50% {
+		scale: .9;
+	}
+}
+@keyframes shake {
+	from, to {
+		/* translate: 0 0; */
+		rotate: 0deg;
+	}
+	20% {
+		/* translate: 5px 0px; */
+		rotate: 3deg;
+	}
+	40% {
+		/* translate: -5px 0px; */
+		rotate: -3deg;
+	}
+	60% {
+		/* translate: 3px 0px; */
+		rotate: -2deg;
+	}
+	80% {
+		/* translate: -3px 0px; */
+		rotate: 1deg;
+	}
+}
+@keyframes bounce {
+	50% {
+		translate: 0 -10px;
+	}
+}
+@keyframes pop {
+	from {
+		scale: .9;
+	}
+	75% {
+		scale: 1.1;
+	}
+	to {
+		scale: 1;
+	}
+}
+@keyframes dialog-push {
+	from {
+		translate: 0px 10px;
+	}
+	to {
+		translate: 0px 0px;
+	}
+}
+@keyframes dialog-drop {
+	to {
+		translate: 0px 10px;
+	}
+	from {
+		translate: 0px 0px;
+	}
+}
+@keyframes slide-up {
+	from { translate: 0 10px;}
+}
+@keyframes fade-in {
+	from { opacity: 0 }
+}
+@keyframes fade-out {
+	to { opacity: 0 }
+}
