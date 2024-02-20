@@ -1,37 +1,35 @@
-// 👀
-
 const data = {
 	board : [
 		[
-			{"text" : "credere", "category": 2},
-			{"text" : "quintus", "category": 3},
-			{"text" : "tam", "category": 1},
-			{"text" : "necare", "category": 0}
+			{"text" : "impero", "category": 1},
+			{"text" : "promitto", "category": 2},
+			{"text" : "dico", "category": 3},
+			{"text" : "duco", "category": 3}
 		],
 		[
-			{"text" : "horatia", "category": 3},
-			{"text" : "persuadere", "category": 2},
-			{"text" : "adeo", "category": 1},
-			{"text" : "occidere", "category": 0}
+			{"text" : "facio", "category": 3},
+			{"text" : "advenio", "category": 2},
+			{"text" : "fideo", "category": 0},
+			{"text" : "soleo", "category": 0}
 		],
 		[
-			{"text" : "iubere", "category": 2},
-			{"text" : "ita", "category": 1},
-			{"text" : "scintilla", "category": 3},
-			{"text" : "flaccus", "category": 3}
+			{"text" : "faveo", "category": 1},
+			{"text" : "credo", "category": 1},
+			{"text" : "audeo", "category": 0},
+			{"text" : "gaudeo", "category": 0}
 		],
 		[
-			{"text" : "interficere", "category": 0},
-			{"text" : "favere", "category": 2},
-			{"text" : "extinguere", "category": 0},
-			{"text" : "tot", "category": 1}
+			{"text" : "effugio", "category": 2},
+			{"text" : "appropinquo", "category": 1},
+			{"text" : "fero", "category": 3},
+			{"text" : "aufero", "category": 2}
 		]
 	],
 	categories : [
-		{"name" : "To kill"},
-		{"name" : "Signpost words"},
+		{"name" : "Semi-deponent verbs"},
 		{"name" : "Verb + dat."},
-		{"name" : "Latin Characters"}
+		{"name" : "Verbs containing preposition"},
+		{"name" : "Irregular singular imperatives"}
 	],
 	attemptsRemaining: 4,
 	history : [],

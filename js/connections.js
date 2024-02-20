@@ -1,6 +1,3 @@
-// 👀
-// todo: fix everything
-
 const board = document.querySelector(".board");
 const submit = document.querySelector(".submit");
 const deselect = document.querySelector(".deselect-all");

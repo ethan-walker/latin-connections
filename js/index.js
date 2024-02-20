@@ -1,5 +1,3 @@
-// 👀
-
 const toast_container = document.querySelector(".toast-container");
 	
 function toast(text) {
