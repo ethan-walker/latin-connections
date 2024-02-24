@@ -64,12 +64,13 @@ html, body {
 }
 
 /*-- 🔘 BUTTONS --*/
-.button {
+button {
 	border: 1px solid var(--color-terracotta);
 	background-color: var(--color-cream);
 	padding: 10px 20px;
 	font-size: inherit;
 	min-height: 24px;
+	cursor: pointer;
 }
 .button--pill {
 	border-radius: 50vh;
@@ -78,8 +79,9 @@ html, body {
 	background-color: var(--color-terracotta);
 	color: var(--color-cream);
 }
-.button:disabled {
+button:disabled {
 	opacity: .7;
+	cursor: not-allowed;
 }
 .button--icon {
 	aspect-ratio: 1;
@@ -89,9 +91,6 @@ html, body {
 }
 .button--borderless {
 	border: none;
-}
-.button:not(:disabled):hover {
-	cursor: pointer;
 }
 /*-- 🍞 TOASTS --*/
 .toast-container {

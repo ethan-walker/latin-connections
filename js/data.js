@@ -33,5 +33,5 @@ const data = {
 	],
 	attemptsRemaining: 4,
 	history : [],
-	version : 001
+	version : 000
 }
