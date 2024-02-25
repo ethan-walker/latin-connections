@@ -176,6 +176,7 @@ function loadBoard() {
 	if (storage.gameOver) {
 		gameOver();
 	}
+	fitText();
 }
 
 function gameOver() {
@@ -323,3 +324,14 @@ async function swapSquares(row1, col1, row2, col2) {
 }
 
 loadBoard();
+
+// Draft code for text box fitting
+function fitText() {
+	for (child of board.children) {
+		textFit(child, {
+			maxFontSize: 15,
+			multiLine: false
+		});
+	}
+}
+window.onresize = fitText;
