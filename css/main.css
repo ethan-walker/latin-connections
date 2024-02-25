@@ -72,6 +72,12 @@ button {
 	min-height: 24px;
 	cursor: pointer;
 }
+button:not(:disabled):hover {
+	background-color: color-mix(in lab, grey 10%, var(--color-cream));
+}
+button.button--fill:hover {
+	background-color: color-mix(in oklch, black 10%, var(--color-terracotta));
+}
 .button--pill {
 	border-radius: 50vh;
 }
