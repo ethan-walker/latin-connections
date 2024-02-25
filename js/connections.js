@@ -327,9 +327,12 @@ loadBoard();
 
 // Draft code for text box fitting
 function fitText() {
+	const text_size = getComputedStyle(document.querySelector(".item"))
+		.getPropertyValue("font-size")
+		.replace("px", "");
 	for (child of board.children) {
 		textFit(child, {
-			maxFontSize: 15,
+			maxFontSize: text_size,
 			multiLine: false
 		});
 	}
