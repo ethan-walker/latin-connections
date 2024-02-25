@@ -197,7 +197,7 @@ function gameOver() {
 }
 
 function handleClick(event) {
-	var item = event.target;
+	var item = event.currentTarget;
 	var num_selected = document.querySelectorAll(".item--selected").length;
 
 	if (item.classList.contains("item--selected")) {

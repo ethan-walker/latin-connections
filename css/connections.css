@@ -57,10 +57,13 @@ h1 {
 	font-size: clamp(0px, 1em, 4vw);
 	user-select: none;
 }
+.item > span {
+	color: inherit;
+}
 .answer-banner {
 	width: 100%;
 	position: absolute;
-	height: calc(calc(100% - calc(3 * var(--gap))) / 4);
+	height: var(--size);
 	display: grid;
 	place-content: center;
 	color: white;
