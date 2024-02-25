@@ -273,7 +273,7 @@ async function checkSelected() {
 		saveStorage(storage);
 		if (storage.attemptsRemaining === 0) {
 			// 💥 FAIL
-			endGame()
+			endGame();
 			return;
 		}
 		// 🤏 ONE AWAY
@@ -287,6 +287,7 @@ async function checkSelected() {
 }
 
 async function endGame() {
+	storage = loadStorage();
 	await new Promise(resolve => setTimeout(resolve, 1000));
 	deselectAll();
 
@@ -298,7 +299,7 @@ async function endGame() {
 	}
 	storage = loadStorage();
 	storage.gameOver = true;
-	saveStorage(storage)
+	saveStorage(storage);
 	gameOver();
 }
 
@@ -331,7 +332,7 @@ function fitText() {
 		.fontSize
 		.replace("px", "");
 	text_size = parseFloat(text_size);
-	for (child of board.children) {
+	for (child of board.querySelectorAll(".item")) {
 		textFit(child, {
 			maxFontSize: text_size,
 			multiLine: false
