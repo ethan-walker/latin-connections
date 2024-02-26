@@ -9,7 +9,7 @@ const data = {
 		[
 			{"text" : "facio", "category": 3},
 			{"text" : "advenio", "category": 2},
-			{"text" : "fideo", "category": 0},
+			{"text" : "confido", "category": 0},
 			{"text" : "soleo", "category": 0}
 		],
 		[
@@ -33,5 +33,5 @@ const data = {
 	],
 	attemptsRemaining: 4,
 	history : [],
-	version : 000
+	version : 001
 }
